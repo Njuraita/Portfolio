@@ -1,21 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">    
-<head> 
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Sharon Njeri Njuraita | Data Analyst Portfolio</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharon Njeri Njuraita | Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-black: #0f0f14;
+            --accent-lilac: #c8a2ff;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-black), var(--accent-lilac));
+            color: white;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .hero-section h1,
+        .hero-section p {
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PROFILE IMAGE */
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+            animation: zoomIn 1.3s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* CARD EFFECTS */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .card-title {
+            color: var(--accent-lilac);
+            font-weight: bold;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--accent-lilac);
+            color: #000;
+        }
+
+        footer {
+            background: var(--primary-black);
+            color: white;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
-<body>  
+<body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Sharon Njeri Njuraita</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
+<!-- HERO -->
+<section id="home" class="hero-section text-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="image/Profesional profile pic.PNG"
+                     alt="Profile Picture"
+                     class="profile-pic shadow-lg">
+            </div>
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold">Hi, I'm Sharon Njeri Njuraita</h1>
+                <p class="lead">Data Analyst • Research • M&E Consulting</p>
+                <a href="#portfolio" class="btn btn-light btn-lg mt-3">View My Work</a>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">📊 Projects</h2>
 
+        <div class="row row-cols-1 row-cols-md-3 g-4">
 
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-bar-chart-line"></i> Bay Technologies BI Solution</h5>
+                        <p class="card-text">
+                            A business intelligence solution delivering actionable insights through dashboards,
+                            KPI tracking, and automated reporting to support strategic decision-making.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-building"></i> Predicting Building Energy Efficiency</h5>
+                        <p class="card-text">
+                            A machine learning regression project focused on predicting building energy efficiency
+                            using structural and environmental variables to support sustainability goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-bank"></i> Bank Marketing Subscription Predictor</h5>
+                        <p class="card-text">
+                            Classification model predicting customer subscription likelihood based on demographic,
+                            behavioral, and campaign data to improve marketing effectiveness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-people"></i> Customer Churn Prediction</h5>
+                        <p class="card-text">
+                            Predictive analytics project identifying churn drivers and high-risk customers to help
+                            organizations improve retention strategies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-graph-up-arrow"></i> Time Series Regression – Corporación Favorita</h5>
+                        <p class="card-text">
+                            Time-series forecasting and regression analysis on retail sales data to predict demand
+                            patterns and support inventory planning.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5 bg-light text-center">
+    <div class="container">
+        <h2 class="fw-bold">Get In Touch</h2>
+        <p class="lead">Open to data-driven projects, research collaborations, and M&E consulting opportunities.</p>
+        <a href="mailto:sharon.n.njuraita@gmail.com" class="btn btn-dark btn-lg">Email Me</a>
+    </div>
+</section>
+
+<footer class="text-center py-3">
+    <p class="mb-0">© 2025 Sharon Njeri Njuraita. Built with Bootstrap.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-
-
-
 </html>
